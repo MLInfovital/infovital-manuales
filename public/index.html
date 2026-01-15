@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manuales Infovital</title>
+
+  <style>
+    :root {
+      --primary: #847ff5;
+      --primary-light: #9b97f7;
+      --background: #f5f4ff;
+      --card-bg: #ffffff;
+      --soft-bg: #f1f0ff;
+      --text-main: #2e2e2e;
+      --text-muted: #6b6b6b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, var(--background) 0%, #ffffff 100%);
+      color: var(--text-main);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      padding: 48px 24px 64px;
+      color: white;
+      text-align: center;
+    }
+
+    .logo img {
+      height: 64px;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      margin: 0 0 12px 0;
+      font-size: 2.2rem;
+      font-weight: 600;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 1.05rem;
+      opacity: 0.95;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: -40px auto 60px auto;
+      padding: 0 24px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 14px 36px rgba(132, 127, 245, 0.18);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card h2 {
+      margin: 0 0 10px 0;
+      color: var(--primary);
+      font-size: 1.45rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      margin-top: auto;
+      text-decoration: none;
+      background: var(--primary);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      display: inline-block;
+      width: fit-content;
+    }
+
+    /* ---------- TORRE DE CONTROL ---------- */
+
+    .admin-sections {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .admin-group {
+      background: var(--soft-bg);
+      border-radius: 14px;
+      padding: 16px 18px;
+    }
+
+    .admin-group h3 {
+      margin: 0 0 10px 0;
+      font-size: 1.05rem;
+      color: var(--primary);
+    }
+
+    .admin-group a {
+      display: block;
+      text-decoration: none;
+      color: var(--text-main);
+      font-size: 0.95rem;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .admin-group a:last-child {
+      border-bottom: none;
+    }
+
+    .admin-group a:hover {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      padding: 36px 16px;
+    }
+
+    footer span {
+      color: var(--primary);
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img
+      src="https://cdn.prod.website-files.com/68a4b4fea3c97a901584703a/68b8d59dd2386b10b24a1d2a_INFOVITAL.avif"
+      alt="Infovital"
+    />
+  </div>
+  <h1>Centro de Manuales Infovital</h1>
+  <p>Guías oficiales de uso para las plataformas y la torre de control</p>
+</header>
+
+<main>
+  <section class="cards">
+
+    <!-- WEB -->
+    <div class="card">
+      <h2>Plataforma Web</h2>
+      <p>
+        Manual completo para el uso del sistema web de Infovital: gestión de
+        usuarios, registros, reportes y seguimiento diario.
+      </p>
+      <a class="btn" href="web/manual-web.pdf" target="_blank">
+        Descargar manual PDF
+      </a>
+    </div>
+
+    <!-- MOBILE -->
+    <div class="card">
+      <h2>Aplicación Móvil</h2>
+      <p>
+        Guía práctica para el uso de la app móvil: registro, alertas,
+        notificaciones y funciones principales desde el celular.
+      </p>
+      <a class="btn" href="mobile/manual-mobile.pdf" target="_blank">
+        Descargar manual PDF
+      </a>
+    </div>
+
+    <!-- ADMIN -->
+    <div class="card">
+      <h2>Torre de Control</h2>
+      <p>
+        Manuales para la gestión integral de la operación, programas y
+        seguimiento desde el panel administrativo de Infovital.
+      </p>
+
+      <div class="admin-sections">
+
+        <div class="admin-group">
+          <h3>Gestión Operativa</h3>
+          <a href="admin/insumos/manual-insumos-infovital.pdf" target="_blank">📄 Insumos</a>
+          <a href="admin/kardex/manual-kardex-infovital.pdf" target="_blank">📄 Kardex de Medicamentos</a>
+          <a href="admin/usuarios/manual-usuarios-infovital.pdf" target="_blank">📄 Usuarios y Roles</a>
+          <a href="admin/reportes/manual-reportes-infovital.pdf" target="_blank">📄 Reportes</a>
+        </div>
+
+        <div class="admin-group">
+          <h3>Programas y Poblaciones</h3>
+          <a href="admin/hogares-geriaticos/manual-hogares-geriaticos.pdf" target="_blank">📄 Hogares Geriátricos</a>
+          <a href="admin/cuidadores/manual-cuidadores.pdf" target="_blank">📄 Cuidadores</a>
+          <a href="admin/pae/manual-pae.pdf" target="_blank">📄 Programa PAE</a>
+          <a href="admin/gobierno/manual-gobierno.pdf" target="_blank">📄 Gobierno y Programas Públicos</a>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  © <span>Infovital</span> · Manuales oficiales de la plataforma
+</footer>
+
+</body>
+</html>
