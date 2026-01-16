@@ -119,21 +119,46 @@
       color: var(--primary);
     }
 
-    .admin-group a {
+    .admin-group a,
+    .admin-group .disabled {
       display: block;
-      text-decoration: none;
-      color: var(--text-main);
       font-size: 0.95rem;
       padding: 8px 0;
       border-bottom: 1px solid rgba(0,0,0,0.05);
     }
 
-    .admin-group a:last-child {
-      border-bottom: none;
+    .admin-group a {
+      text-decoration: none;
+      color: var(--text-main);
     }
 
     .admin-group a:hover {
       color: var(--primary);
+      font-weight: 600;
+    }
+
+    .admin-group a:last-child,
+    .admin-group .disabled:last-child {
+      border-bottom: none;
+    }
+
+    /* ---------- DESHABILITADOS ---------- */
+
+    .disabled {
+      opacity: 0.45;
+      filter: grayscale(100%);
+      pointer-events: none;
+      color: var(--text-muted);
+    }
+
+    .badge-soon {
+      display: inline-block;
+      font-size: 0.7rem;
+      background: #e0e0e0;
+      color: #666;
+      padding: 4px 8px;
+      border-radius: 8px;
+      margin-left: 6px;
       font-weight: 600;
     }
 
@@ -170,51 +195,71 @@
     <!-- WEB -->
     <div class="card">
       <h2>Plataforma Web</h2>
-      <p>
-        Manual completo para el uso del sistema web de Infovital: gestión de
-        usuarios, registros, reportes y seguimiento diario.
-      </p>
-      <a class="btn" href="web/manual-web.pdf" target="_blank">
-        Descargar manual PDF
-      </a>
+      <p>Manual completo para el uso del sistema web de Infovital.</p>
+      <a class="btn disabled">Próximamente</a>
     </div>
 
     <!-- MOBILE -->
     <div class="card">
       <h2>Aplicación Móvil</h2>
-      <p>
-        Guía práctica para el uso de la app móvil: registro, alertas,
-        notificaciones y funciones principales desde el celular.
-      </p>
-      <a class="btn" href="mobile/manual-mobile.pdf" target="_blank">
-        Descargar manual PDF
-      </a>
+      <p>Guía práctica para el uso de la app móvil.</p>
+      <a class="btn disabled">Próximamente</a>
     </div>
 
     <!-- ADMIN -->
     <div class="card">
       <h2>Torre de Control</h2>
-      <p>
-        Manuales para la gestión integral de la operación, programas y
-        seguimiento desde el panel administrativo de Infovital.
-      </p>
+      <p>Manuales para la gestión integral desde el panel administrativo.</p>
 
       <div class="admin-sections">
 
         <div class="admin-group">
           <h3>Gestión Operativa</h3>
-          <a href="admin/insumos/manual-insumos-infovital.pdf" target="_blank">📄 Insumos</a>
-          <a href="admin/kardex/manual-kardex-infovital.pdf" target="_blank">📄 Kardex de Medicamentos</a>
-          <a href="admin/usuarios/manual-usuarios-infovital.pdf" target="_blank">📄 Usuarios y Roles</a>
-          <a href="admin/reportes/manual-reportes-infovital.pdf" target="_blank">📄 Reportes</a>
+
+          <!-- ACTIVO -->
+          <a href="admin/insumos/manual-insumos-infovital.pdf" target="_blank">
+            📄 Insumos
+          </a>
+
+          <!-- DESHABILITADOS -->
+          <div class="disabled">
+            📄 Kardex de Medicamentos
+            <span class="badge-soon">Próximamente</span>
+          </div>
+
+          <div class="disabled">
+            📄 Usuarios y Roles
+            <span class="badge-soon">Próximamente</span>
+          </div>
+
+          <div class="disabled">
+            📄 Reportes
+            <span class="badge-soon">Próximamente</span>
+          </div>
         </div>
 
         <div class="admin-group">
           <h3>Programas y Poblaciones</h3>
-          <a href="admin/hogares-geriaticos/manual-hogares-geriaticos.pdf" target="_blank">📄 Hogares Geriátricos</a>
-          <a href="admin/cuidadores/manual-cuidadores.pdf" target="_blank">📄 Cuidadores</a>
-          <a href="admin/pae/manual-pae.pdf" target="_blank">📄 Programa PAE</a>
-          <a href="admin/gobierno/manual-gobierno.pdf" target="_blank">📄 Gobierno y Programas Públicos</a>
+
+          <div class="disabled">
+            📄 Hogares Geriátricos
+            <span class="badge-soon">Próximamente</span>
+          </div>
+
+          <div class="disabled">
+            📄 Cuidadores
+            <span class="badge-soon">Próximamente</span>
+          </div>
+
+          <div class="disabled">
+            📄 Programa PAE
+            <span class="badge-soon">Próximamente</span>
+          </div>
+
+          <div class="disabled">
+            📄 Gobierno y Programas Públicos
+            <span class="badge-soon">Próximamente</span>
+          </div>
         </div>
 
       </div>
